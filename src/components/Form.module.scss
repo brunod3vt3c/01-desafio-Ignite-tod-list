@@ -1,0 +1,53 @@
+.form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 90px;
+  gap: 0.5rem;
+
+  & input {
+    background: var(--gray-500);
+    color: var(--gray-100);
+    border: 1px solid var(--gray-700);
+    padding: 1rem;
+    border-radius: 8px;
+
+    &:focus {
+      border: 1px solid var(--purple-dark);
+    }
+  }
+
+  .createTask {
+    background: var(--blue-dark);
+    color: var(--gray-100);
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:focus {
+      border: 1px solid var(--blue);
+    }
+
+    &:hover {
+      background: var(--blue);
+    }
+  }
+
+}
+
+@media (max-width: 400px) {
+  .form {
+      grid-template-columns: 1fr;
+      
+      .createTask {
+        padding: 1rem;
+      }
+  }
+
+}

@@ -1,0 +1,139 @@
+.tasks {
+  width: 100%;
+  margin-top: 4rem;
+
+  & header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+  }
+  
+}
+
+.tasks 
+.tasksCreated {
+  color: var(--blue);
+}
+
+.tasksConcluded {
+  color: var(--purple);
+
+}
+
+.tasksNumbers {
+  background: var(--gray-400);
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-left: 0.5rem;
+  color: var(--gray-200);
+  font-size: 0.75rem;
+
+}
+
+.notTasks {
+  padding-top: 4rem;
+  border-top: 1px solid var(--gray-400);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  & > img {
+    height: 3.5rem;
+  }
+
+  & > p {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+
+  & > p > span {
+    font-weight: 400;
+  }
+}
+
+.showTasks {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 0.75rem;
+
+  background: var(--gray-500);    
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--gray-400);
+
+  & label {
+    cursor: pointer;
+
+    & span {
+      color: var(--gray-100);
+      font-size: 0.875rem;
+      display: flex;
+      line-height: 140%;
+    }
+  }
+
+  & input {
+    display: none;
+  }
+
+  & input + span:before {
+    content: '';
+    width: 14px;
+    margin-right: 0.75rem;
+    margin-top: 0.2rem;
+    height: 14px;
+    border-radius: 50%;
+    background: transparent;
+    display: inline-block;
+    border: 2px solid var(--blue);
+  }
+
+  & input:checked + span:before {
+    background: var(--purple-dark);
+    border: 2px solid var(--purple-dark);
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.43059 0.342123L4.09865 4.67406L1.61618 2.19159L0.780273 3.0275L4.09865 6.34587L9.26649 1.17803L8.43059 0.342123Z' fill='%23F2F2F2'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  & label input:checked + span {
+    text-decoration: line-through;
+    color: var(--gray-300);
+  }
+  
+}
+
+.trash {
+  background: transparent;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+
+  & svg {
+    color: var(--gray-300);
+  }
+
+  &:hover {
+    background: var(--gray-400);
+  }
+}
+
+.trash:hover svg {
+  color: var(--danger);
+}

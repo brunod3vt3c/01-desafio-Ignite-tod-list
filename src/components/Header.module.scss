@@ -1,0 +1,41 @@
+.header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	background: var(--gray-700);
+
+	padding: 4.5rem;
+}
+
+.title {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.title img {
+	width: 3.25rem;
+	height: 3.25rem;
+	bottom: 0;
+	margin-top: 20px;
+}
+
+.title strong {
+	font-size: 4rem;
+	display: flex;
+}
+
+.title strong p {
+	color: #5e60ce;
+	font-weight: 900;
+}
+
+.title strong p:nth-child(1) {
+	color: #4ea8de;
+}
+
+.inputDiv {
+	margin-top: -5px;
+	bottom: 0;
+}
